@@ -8,21 +8,17 @@ const framer = await connect(
     process.env.FRAMER_API_KEY
 );
 
+// 1. Traer todas las colecciones CMS
 const collections = await framer.getCollections();
 
-const agenda = collections.find(c => c.name === "Agenda");
+console.log(collections);
 
-const fields = await agenda.getFields();
-const items = await agenda.getItems();
 
-// buscar IDs de Fecha y Estado
+// 2. Buscar la colección Agenda
+const agenda = collections.find(
+    c => c.name === "Agenda"
+);
 
-// recorrer items
 
-// actualizar
-
-// publicar
-
-await framer.publish();
-
-framer.disconnect();
+// 3. Mostrar qué encontró
+console.log(agenda);
