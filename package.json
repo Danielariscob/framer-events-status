@@ -1,0 +1,8 @@
+{
+  "name": "framer-event-status",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "framer-api": "latest"
+  }
+}
